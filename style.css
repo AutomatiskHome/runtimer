@@ -1,0 +1,25 @@
+/* Schlichtes, gut lesbares Layout – ohne externe Schriften oder Skripte,
+   damit beim Aufruf keine Daten an Dritte gehen. */
+:root {
+  color-scheme: light dark;
+  --accent: #2e9e4f;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+h1 { font-size: 1.7rem; line-height: 1.25; margin-bottom: 0.25rem; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.25rem; }
+a { color: var(--accent); }
+.meta { color: GrayText; font-size: 0.95rem; }
+.lang { text-align: right; margin: 0; font-size: 0.95rem; }
+.links { list-style: none; padding: 0; font-size: 1.15rem; }
+.links li { margin: 0.5rem 0; }
