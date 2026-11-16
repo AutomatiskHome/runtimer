@@ -23,3 +23,17 @@ a { color: var(--accent); }
 .lang { text-align: right; margin: 0; font-size: 0.95rem; }
 .links { list-style: none; padding: 0; font-size: 1.15rem; }
 .links li { margin: 0.5rem 0; }
+
+.lead { font-size: 1.15rem; margin-top: 0; }
+.footer { margin-top: 3rem; border-top: 1px solid color-mix(in srgb, GrayText 40%, transparent); padding-top: 1rem; }
+
+/* FAQ: aufklappbare Einträge */
+details {
+  border: 1px solid color-mix(in srgb, GrayText 35%, transparent);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.6rem 0;
+}
+details[open] { padding-bottom: 0.2rem; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin: 0.5rem 0; }
