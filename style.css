@@ -37,3 +37,7 @@ details {
 details[open] { padding-bottom: 0.2rem; }
 summary { cursor: pointer; font-weight: 600; }
 details p { margin: 0.5rem 0; }
+
+/* App-Logo: abgerundet wie ein App-Icon */
+.logo { border-radius: 22%; display: block; margin: 0.5rem 0 0.25rem; }
+.logo-small { border-radius: 22%; vertical-align: -0.35em; margin-right: 0.2rem; }
