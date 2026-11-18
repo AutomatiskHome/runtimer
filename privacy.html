@@ -13,13 +13,13 @@
 <p class="lang"><a href="datenschutz.html" hreflang="de">Deutsche Fassung</a></p>
 
 <h1>Privacy Policy for RunTimer</h1>
-<p class="meta">Last updated: November 17, 2026</p>
+<p class="meta">Last updated: November 18, 2026</p>
 
 <h2>At a glance</h2>
 <ul>
   <li>RunTimer has <strong>no server of its own</strong>. Your workout and health data are never sent to the developer.</li>
-  <li>There are <strong>no ads, no analytics or tracking services</strong>, and no third-party services built in.</li>
-  <li>All data stays on your iPhone, your Apple Watch and in Apple Health – under your control.</li>
+  <li>There are <strong>no ads, no analytics or tracking services</strong>. The Intervals.icu connection is optional and switched off by default.</li>
+  <li>Unless you choose to share files or enable uploads to Intervals.icu, your workout data stays on your devices and in Apple Health. You decide whether workouts are sent to Intervals.icu.</li>
 </ul>
 
 <h2>1. Controller</h2>
@@ -27,13 +27,13 @@
 Email: <a href="mailto:runtimerapp@tuta.com">runtimerapp@tuta.com</a></p>
 
 <h2>2. What data the app uses and why</h2>
-<p>RunTimer is an interval timer for run-walk training on iPhone and Apple Watch. The following data is processed <strong>only locally on your devices</strong> and only after you grant access in the system settings:</p>
+<p>RunTimer is an interval timer for run-walk training on iPhone and Apple Watch. The following data is recorded and displayed <strong>on your devices</strong>. The app requires your system permissions to access protected health, location and motion data. Additional transfers to Intervals.icu take place only if you connect your account and enable automatic uploads (see section 3).</p>
 
 <h3>Apple Health (HealthKit) – on Apple Watch</h3>
 <ul>
   <li><strong>Read and write:</strong> heart rate, active energy (calories), walking and running distance, workouts and workout routes.</li>
   <li><strong>Purpose:</strong> showing live values during your workout (heart rate, pace, distance), target-zone alerts, and saving the workout to Apple Health so it appears in the Fitness app.</li>
-  <li>Health data is never used for advertising or any other purpose and is never shared with third parties.</li>
+  <li>RunTimer uses health data for workout features, not for advertising or tracking. If you enable uploads to Intervals.icu or share a workout file yourself, the health data it contains may be sent to the service you choose.</li>
 </ul>
 
 <h3>Location (GPS) – on Apple Watch, only during a workout</h3>
@@ -54,7 +54,7 @@ Email: <a href="mailto:runtimerapp@tuta.com">runtimerapp@tuta.com</a></p>
 
 <h3>Transfer between iPhone and Apple Watch</h3>
 <ul>
-  <li>Settings, templates, the live workout status and, if enabled, the diagnostic log are transferred via Apple's system interface "WatchConnectivity" directly between <strong>your own paired devices</strong> – never to the developer.</li>
+  <li>Settings, templates, the live workout status, saved workout files and, if enabled, the diagnostic log are transferred via Apple's system interface "WatchConnectivity" directly between <strong>your own paired devices</strong> – never to the developer.</li>
 </ul>
 
 <h3>Diagnostic log (optional, can be turned off)</h3>
@@ -66,13 +66,36 @@ Email: <a href="mailto:runtimerapp@tuta.com">runtimerapp@tuta.com</a></p>
 
 <h3>Workout files (TCX export)</h3>
 <ul>
-  <li>After each saved workout, the watch creates a workout file in TCX format containing time, distance, heart rate, elevation, GPS route and the individual running and walking phases. It is transferred only to your own iPhone and stored there under <em>Trainingsdateien</em> (Workout files).</li>
-  <li>The file leaves your devices only if <strong>you</strong> share it yourself – for example to upload it to a training platform such as Intervals.icu, Runalyze or Strava. Processing there is subject to that platform's privacy policy.</li>
-  <li>You can delete the files in the app at any time.</li>
+  <li>After each saved workout, the watch creates a workout file in TCX format containing time, distance, heart rate, calories, available elevation and GPS data, and the individual workout phases. It is first transferred to your own iPhone and stored there under <em>Trainingsdateien</em> (Workout files).</li>
+  <li>The file leaves your devices if <strong>you</strong> share it yourself – for example with a training platform such as Runalyze or Strava – or enable automatic uploads to Intervals.icu. Processing on each platform is subject to its privacy policy.</li>
+  <li>You can delete the files in the app at any time. A background transfer that has already been scheduled uses its own file copy; deleting the original file does not stop that transfer. To stop further uploads, switch off automatic uploads. This does not delete workouts already stored on a platform.</li>
 </ul>
 
-<h2>3. No sharing with the developer or third parties</h2>
-<p>The developer does not receive any personal data through the app. No data is transmitted to servers of the developer or to third parties. The app contains no advertising, no analytics tools and no tracking as defined by Apple's App Tracking Transparency.</p>
+<h2>3. Optional connection to Intervals.icu</h2>
+<p>RunTimer offers an optional connection to the training service <strong>Intervals.icu</strong>. Availability depends on whether the connection has been enabled in your app version. You can use the other workout features without this connection. RunTimer does not operate a server for the transfer; data is sent directly from your iPhone to Intervals.icu over an encrypted HTTPS connection.</p>
+
+<h3>Sign-in and permission</h3>
+<ul>
+  <li>Under <em>Intervals.icu → Mit Intervals.icu verbinden</em> (Connect to Intervals.icu), Apple's web authentication opens the service's sign-in page. You enter your credentials directly with Intervals.icu. RunTimer receives and stores <strong>no password</strong>.</li>
+  <li>Sign-in uses OAuth with PKCE. RunTimer requests activity permission (<code>ACTIVITY:WRITE</code>) to upload saved workouts. At Intervals.icu, this permission also includes read access to activities; RunTimer currently uses the connection for uploads and does not request calendar or wellness permissions.</li>
+  <li>Intervals.icu returns an access token, your athlete ID and your account name. RunTimer stores these details in the iPhone's local Keychain to display the connected account and authorize subsequent uploads. They are not sent to the watch or the developer.</li>
+</ul>
+
+<h3>Automatic uploads and data transferred</h3>
+<ul>
+  <li>Automatic uploads are <strong>off by default</strong>. Signing in alone does not enable them. Only after you turn on <em>Trainings automatisch hochladen</em> (Automatically upload workouts) will workouts started and saved from that point onwards be uploaded. Existing workouts are not automatically uploaded retrospectively. Switching the option off and back on sets a new activation time.</li>
+  <li>The TCX file contains the workout start time and timestamps, duration, distance, heart rate, calories, interval laps, and available GPS coordinates and elevation values. A workout identifier derived from the file contents and the access token are also sent to associate the upload with your account. When a connection is established, Intervals.icu also receives technically necessary connection data such as your IP address.</li>
+  <li>Transfers start after the workout file reaches your iPhone. They may run in the background and use mobile data. Failed uploads may be retried automatically. For this purpose, RunTimer locally stores activation details, the account association, file identifiers, and success and retry status. A temporary file copy is created for background uploads and removed when the respective transfer attempt finishes.</li>
+</ul>
+
+<h3>Switching off, disconnecting and deleting</h3>
+<ul>
+  <li>You can switch off automatic uploads at any time. RunTimer then stops scheduling further uploads and cancels running or waiting transfers. Data already sent cannot be retrieved by doing this.</li>
+  <li><em>Konto trennen</em> (Disconnect account) switches uploads off, revokes access at Intervals.icu and, on successful completion, removes the token and account details from the Keychain. If revocation is not possible, for example because there is no internet connection, uploads remain off and the account connection is kept so you can retry disconnecting. You can also revoke access directly in your Intervals.icu account.</li>
+  <li>Switching uploads off, disconnecting, deleting a local workout file or removing RunTimer does not delete activities already stored at Intervals.icu. You manage and delete those activities at Intervals.icu. Workouts stored separately in Apple Health likewise remain until you delete them there.</li>
+</ul>
+<p>Intervals.icu is operated by <strong>intervals.icu Ltd</strong>. Processing by the service, its retention periods, service providers and possible international data transfers are covered by the <a href="https://www.intervals.icu/privacy-policy/">Intervals.icu Privacy Policy</a>. Its privacy and cookie rules also apply to its sign-in page.</p>
+<p>The developer receives no workout data or access tokens through this connection. RunTimer continues to contain no advertising, no analytics tools and no tracking as defined by Apple's App Tracking Transparency.</p>
 
 <h2>4. Apple services</h2>
 <p>The app uses features of the operating system (Apple Health, Location Services, motion sensors, WatchConnectivity). Whether and how Apple syncs this data between your devices, e.g. via iCloud, depends on your Apple settings and on <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
@@ -85,10 +108,10 @@ Email: <a href="mailto:runtimerapp@tuta.com">runtimerapp@tuta.com</a></p>
 <p>This page is hosted on GitHub Pages (GitHub, Inc., USA). When you visit it, GitHub processes technically necessary data such as your IP address in order to deliver the page and ensure security. I do not use cookies or analytics tools myself. More information: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
 
 <h2>7. Your rights</h2>
-<p>Under the GDPR you have the right of access, rectification, erasure, restriction of processing, data portability and objection, as well as the right to lodge a complaint with a data protection supervisory authority. Since the app does not transfer your data to me, it resides solely on your devices: you can view and delete it at any time in the Health app, revoke permissions under <em>Settings → Privacy &amp; Security</em>, or delete the app. For questions, contact me at the email address above.</p>
+<p>Under the GDPR you have the right of access, rectification, erasure, restriction of processing, data portability and objection, as well as the right to lodge a complaint with a data protection supervisory authority. You can view and delete locally stored workouts in RunTimer or the Health app and revoke system permissions under <em>Settings → Privacy &amp; Security</em>. You can withdraw consent to optional transfers at any time for the future by switching uploads off or disconnecting your account; this does not affect the lawfulness of processing that has already taken place. You can exercise rights concerning data stored at Intervals.icu with that service. Deleting RunTimer does not remove data from Intervals.icu or Apple Health. For questions, contact me at the email address above.</p>
 
 <h2>8. Changes</h2>
-<p>If the app changes – for example, if an optional upload of workouts to training platforms is added in the future – this privacy policy will be updated beforehand. The version published here applies.</p>
+<p>If the app's data processing changes, this privacy policy will be updated accordingly. The version published here applies.</p>
 </main>
 </body>
 </html>
