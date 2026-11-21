@@ -63,12 +63,20 @@
   <li><strong>Apple Health &amp; Fitness:</strong> Herzfrequenz, Kalorien, Distanz, Pace und GPS-Route.</li>
   <li><strong>Zusammenfassung</strong> auf Uhr und iPhone – mit Werten <strong>getrennt nach Lauf- und Gehphasen</strong> (Zeit, Ø Pace, Ø Puls).</li>
   <li><strong>Live-Status</strong> auf dem iPhone während des Trainings.</li>
-  <li><strong>Trainingsdatei (TCX)</strong> für jedes gespeicherte Training – mit jeder Lauf- und Gehphase als eigener Runde, Puls und GPS-Route. Teilen, in Dateien sichern oder bei Trainingsplattformen wie Intervals.icu, Runalyze oder Strava hochladen.</li>
+  <li><strong>Trainingsdatei (TCX)</strong> für jedes gespeicherte Training – mit jeder Lauf- und Gehphase als eigener Runde, Puls und GPS-Route. Teilen, in Dateien sichern oder bei Trainingsplattformen wie Strava hochladen.</li>
+</ul>
+
+<h3>Automatischer Upload (optional)</h3>
+<ul>
+  <li><strong>Direkt zu deiner Trainingsplattform:</strong> RunTimer kann jedes gespeicherte Training automatisch zu <strong>Intervals.icu</strong>, <strong>Tredict</strong> oder <strong>Runalyze</strong> hochladen – mit allen Lauf- und Gehphasen als eigene Runden, Puls und GPS-Route.</li>
+  <li><strong>Einfach eingerichtet:</strong> Intervals.icu verbindest du mit deinem Konto-Login, für Tredict und Runalyze hinterlegst du ein persönliches API-Token. RunTimer erhält nie dein Passwort.</li>
+  <li><strong>Im Hintergrund:</strong> Sobald die Trainingsdatei das iPhone erreicht, wird sie übertragen – auch über mobile Daten und mit automatischer Wiederholung, falls die Verbindung kurz fehlt.</li>
+  <li><strong>Freiwillig:</strong> Jeder Dienst ist standardmäßig aus und wird einzeln unter <em>Verbindungen</em> eingeschaltet. Hochgeladen werden nur Trainings ab der Aktivierung.</li>
 </ul>
 
 <h3>Datenschutz</h3>
 <ul>
-  <li>Kein eigener Server, keine Werbung, kein Tracking. Deine Daten bleiben auf iPhone, Apple Watch und in Apple Health. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</li>
+  <li>Kein eigener Server, keine Werbung, kein Tracking. Deine Daten bleiben auf iPhone, Apple Watch und in Apple Health – außer du schaltest selbst einen Upload zu einer Trainingsplattform ein. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</li>
 </ul>
 
 <h2 id="faq">Häufige Fragen</h2>
@@ -90,7 +98,7 @@
 
 <details>
   <summary>Warum fragt die App nach Health, Standort und Bewegung?</summary>
-  <p><strong>Health</strong> für Puls, Kalorien und Distanz während des Trainings sowie zum Speichern des Workouts. <strong>Standort</strong> für Strecke, Pace und GPS-Route. <strong>Bewegung &amp; Fitness</strong> für die Schritterkennung der automatischen Pause. Alle Daten bleiben auf deinen Geräten.</p>
+  <p><strong>Health</strong> für Puls, Kalorien und Distanz während des Trainings sowie zum Speichern des Workouts. <strong>Standort</strong> für Strecke, Pace und GPS-Route. <strong>Bewegung &amp; Fitness</strong> für die Schritterkennung der automatischen Pause. Alle Daten bleiben auf deinen Geräten, solange du keinen optionalen Upload einschaltest.</p>
 </details>
 
 <details>
@@ -104,7 +112,13 @@
 </details>
 
 <details>
-  <summary>Wie lade ich ein Training zu Intervals.icu, Runalyze oder Strava hoch?</summary>
+  <summary>Wie lade ich Trainings automatisch zu Intervals.icu, Tredict oder Runalyze hoch?</summary>
+  <p>Öffne in der iPhone-App <em>Verbindungen</em> und wähle den Dienst. Bei <strong>Intervals.icu</strong> tippst du auf <em>Mit Intervals.icu verbinden</em> und meldest dich dort an. Bei <strong>Tredict</strong> und <strong>Runalyze</strong> erstellst du in den Einstellungen des Dienstes ein persönliches API-Token (Tredict: Berechtigung activityWrite; Runalyze: activity_push mit Ablaufdatum) und fügst es in RunTimer ein. Schalte anschließend <em>Trainings automatisch hochladen</em> ein. Den Stand siehst du unter <em>Übertragungsstatus</em>.</p>
+  <p>Hinweis: Tredict-Tokens bleiben nur aktiv, wenn du dich mindestens alle zehn Tage bei Tredict anmeldest; Runalyze-Tokens laufen zum gewählten Datum ab und müssen dann ersetzt werden.</p>
+</details>
+
+<details>
+  <summary>Wie lade ich ein Training manuell hoch, etwa zu Strava?</summary>
   <p>Nach jedem gespeicherten Training überträgt die Uhr eine TCX-Datei auf dein iPhone. Du findest sie in der iPhone-App unter <em>Trainingsdateien</em>. Tippe auf das Teilen-Symbol, sichere die Datei in <em>Dateien</em> oder sende sie dir per Mail, und lade sie dann auf der Website der Plattform über „Upload“ bzw. „Datei hochladen“ hoch. Jede Lauf- und Gehphase erscheint dort als eigene Runde.</p>
 </details>
 
